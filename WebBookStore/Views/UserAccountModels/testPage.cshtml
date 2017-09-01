@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "testPage";
+}
+
+<h2>Novo logovanje</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.Label("Username");
+    @Html.TextBox("username");
+    @Html.Label("Password");
+    @Html.TextBox("password");
+    <input type="submit" value="pritisni1" />
+}

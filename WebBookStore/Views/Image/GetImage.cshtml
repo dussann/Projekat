@@ -1,0 +1,31 @@
+﻿@model WebBookStore.Models.ImageModel
+
+@{
+    ViewBag.Title = "GetImage";
+}
+
+<h2>GetImage</h2>
+
+@using (Html.BeginForm("GetImage","Image",FormMethod.Post, new { enctype="multipart/form-data"}))
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>ImageModel</h4>
+        <hr />
+        @Html.LabelFor(model=>model.Description)
+  
+        <input type="file" id="image" name="image" />
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
