@@ -10,7 +10,8 @@ namespace WebBookStore.Models
    
     [Table("ImageT")]
     public class ImageModel
-    {     
+    {   
+        //Evo je neka promena  
         [ForeignKey("UserAccountModel")]
         public int ImageModelID { get; set; }
         public bool isLogImage { get; set; }

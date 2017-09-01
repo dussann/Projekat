@@ -128,10 +128,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\WebBookStore.Models.AppDbContext.mdf" />
-    <Content Include="App_Data\WebBookStore.Models.AppDbContext_log.ldf">
-      <DependentUpon>WebBookStore.Models.AppDbContext.mdf</DependentUpon>
-    </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
@@ -203,7 +199,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201708292155067_baza.resx">
       <DependentUpon>201708292155067_baza.cs</DependentUpon>
