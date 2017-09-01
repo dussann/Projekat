@@ -27,6 +27,6 @@ namespace WebBookStore.Controllers
             db.ImageModels.Add(model);
             db.SaveChanges();
             return Content("Slika je sacuvana");
-        }
+        } 
     }
 }
