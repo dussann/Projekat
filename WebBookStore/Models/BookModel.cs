@@ -32,7 +32,7 @@ namespace WebBookStore.Models
         public bool isDeleted { get; set; }
 
        
-        public virtual ICollection<ImageModel> ImageModelList { get; set; }
+        //public virtual ICollection<ImageModel> ImageModelList { get; set; }
 
     }
 }

@@ -45,7 +45,7 @@ namespace WebBookStore.Controllers
         }
 
         [HttpPost]
-        public ActionResult registerPage(ViewModel vm)
+        public ActionResult registerPage(UserAccountModel vm)
         {
 
             //string fileName = Path.GetFileNameWithoutExtension(vm.UserAccount.ImageFile.FileName);
@@ -54,11 +54,17 @@ namespace WebBookStore.Controllers
             //vm.UserAccount.ImagePath = "~/Image/" + fileName;
             //fileName = Path.Combine(Server.MapPath("~/Image/"), fileName);
             //vm.UserAccount.ImageFile.SaveAs(fileName);
+            try
+            {
+                db.UserModels.Add(vm);
 
-            db.UserModels.Add(vm.UserAccount);
-                
-            db.SaveChanges();
-            ModelState.Clear();
+                db.SaveChanges();
+                ModelState.Clear();
+            }catch(Exception ex)
+            {
+                throw;
+            }
+            
             return View("Index");       
         }
 

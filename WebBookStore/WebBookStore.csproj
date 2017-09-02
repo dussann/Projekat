@@ -163,6 +163,14 @@
     <Compile Include="Migrations\201708292155067_baza.Designer.cs">
       <DependentUpon>201708292155067_baza.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709020046023_testBaze.cs" />
+    <Compile Include="Migrations\201709020046023_testBaze.Designer.cs">
+      <DependentUpon>201709020046023_testBaze.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709020119429_doradaBaze.cs" />
+    <Compile Include="Migrations\201709020119429_doradaBaze.Designer.cs">
+      <DependentUpon>201709020119429_doradaBaze.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AppDbContext.cs" />
     <Compile Include="Models\BookModel.cs" />
@@ -205,6 +213,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201708292155067_baza.resx">
       <DependentUpon>201708292155067_baza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709020046023_testBaze.resx">
+      <DependentUpon>201709020046023_testBaze.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709020119429_doradaBaze.resx">
+      <DependentUpon>201709020119429_doradaBaze.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

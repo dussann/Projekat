@@ -27,11 +27,11 @@ namespace WebBookStore.Models
         [DataType(DataType.Password)]
         public string Password { get; set; }
 
-        [NotMapped]
-        [Required]
-        [System.Web.Mvc.Compare("Password")]
-        [DataType(DataType.Password)]
-        public string PasswordRepeat { get; set; }
+        //[NotMapped]
+        //[Required]
+        //[System.Web.Mvc.Compare("Password")]
+        //[DataType(DataType.Password)]
+        //public string PasswordRepeat { get; set; }
 
         [Display(Name ="Vasa Email adresa")]
         [DataType(DataType.EmailAddress,ErrorMessage ="NIste pravilno uneli mail")]
