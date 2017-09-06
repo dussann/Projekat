@@ -29,7 +29,7 @@ namespace WebBookStore.Controllers
             
 
             //var trazenaOsoba1 = db.UserModels.Find(vm.UserAccount.Password);
-            var trazenaOsoba = db.UserModels.First(user=>user.Password == vm.UserAccount.Password && user.Username == vm.UserAccount.Username);
+            var trazenaOsoba = db.UserAccountModels.FirstOrDefault(user=>user.Password == vm.UserAccount.Password && user.Username == vm.UserAccount.Username);
             if (trazenaOsoba != null)
             {
                 return RedirectToAction("Index","Book");
@@ -56,7 +56,7 @@ namespace WebBookStore.Controllers
             //vm.UserAccount.ImageFile.SaveAs(fileName);
             try
             {
-                db.UserModels.Add(vm);
+                db.UserAccountModels.Add(vm);
 
                 db.SaveChanges();
                 ModelState.Clear();

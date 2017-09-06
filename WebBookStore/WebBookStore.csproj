@@ -171,6 +171,42 @@
     <Compile Include="Migrations\201709020119429_doradaBaze.Designer.cs">
       <DependentUpon>201709020119429_doradaBaze.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709051403463_promenaBazea7asd.cs" />
+    <Compile Include="Migrations\201709051403463_promenaBazea7asd.Designer.cs">
+      <DependentUpon>201709051403463_promenaBazea7asd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709051406412_prome.cs" />
+    <Compile Include="Migrations\201709051406412_prome.Designer.cs">
+      <DependentUpon>201709051406412_prome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709051413200_dorada.cs" />
+    <Compile Include="Migrations\201709051413200_dorada.Designer.cs">
+      <DependentUpon>201709051413200_dorada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709051423042_doradaImagea.cs" />
+    <Compile Include="Migrations\201709051423042_doradaImagea.Designer.cs">
+      <DependentUpon>201709051423042_doradaImagea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709051440163_vezba.cs" />
+    <Compile Include="Migrations\201709051440163_vezba.Designer.cs">
+      <DependentUpon>201709051440163_vezba.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709051459245_promena.cs" />
+    <Compile Include="Migrations\201709051459245_promena.Designer.cs">
+      <DependentUpon>201709051459245_promena.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709051513040_useracc.cs" />
+    <Compile Include="Migrations\201709051513040_useracc.Designer.cs">
+      <DependentUpon>201709051513040_useracc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709051636342_doradaa.cs" />
+    <Compile Include="Migrations\201709051636342_doradaa.Designer.cs">
+      <DependentUpon>201709051636342_doradaa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709060311312_promenaBaze.cs" />
+    <Compile Include="Migrations\201709060311312_promenaBaze.Designer.cs">
+      <DependentUpon>201709060311312_promenaBaze.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AppDbContext.cs" />
     <Compile Include="Models\BookModel.cs" />
@@ -219,6 +255,33 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709020119429_doradaBaze.resx">
       <DependentUpon>201709020119429_doradaBaze.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709051403463_promenaBazea7asd.resx">
+      <DependentUpon>201709051403463_promenaBazea7asd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709051406412_prome.resx">
+      <DependentUpon>201709051406412_prome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709051413200_dorada.resx">
+      <DependentUpon>201709051413200_dorada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709051423042_doradaImagea.resx">
+      <DependentUpon>201709051423042_doradaImagea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709051440163_vezba.resx">
+      <DependentUpon>201709051440163_vezba.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709051459245_promena.resx">
+      <DependentUpon>201709051459245_promena.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709051513040_useracc.resx">
+      <DependentUpon>201709051513040_useracc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709051636342_doradaa.resx">
+      <DependentUpon>201709051636342_doradaa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709060311312_promenaBaze.resx">
+      <DependentUpon>201709060311312_promenaBaze.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

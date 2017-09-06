@@ -12,7 +12,8 @@ namespace WebBookStore.Models
     public class ImageModel
     {   
         //Evo je neka promena  
-        [ForeignKey("UserAccountModel")]
+        //[ForeignKey("UserAccountModel")]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ImageModelID { get; set; }
         public bool isLogImage { get; set; }
         public string Description { get; set; }
