@@ -15,7 +15,13 @@ namespace WebBookStore.Controllers
     {
         private AppDbContext db = new AppDbContext();
 
-        
+        public ActionResult Test()
+        {
+            Session["x"] = "asd";
+            return View();
+        }
+
+
         public ActionResult Index()
         {
             
@@ -25,13 +31,16 @@ namespace WebBookStore.Controllers
         [HttpPost]
         public ActionResult Index(ViewModel vm)
         {
-
+            
             //var trazenaOsoba1 = db.UserModels.Find(vm.UserAccount.Password);
             var trazenaOsoba = db.UserAccountModels.FirstOrDefault(user=>user.Password == vm.UserAccount.Password && user.Username == vm.UserAccount.Username);
             if (trazenaOsoba != null)
             {
-                Session["user"] = "aaaaaaaaaaa";
-                return RedirectToAction("Index","Book");
+
+                Session["user"] = vm.UserAccount.Username;
+                return RedirectToAction("Index","Book",new { user = Session["user"].ToString()});
+                //return RedirectToAction("Index", "Book");
+                return View();
             }else
             {
                 return Content("Ne postoji takva osoba");
@@ -63,12 +72,7 @@ namespace WebBookStore.Controllers
             return View();
         }
 
-        public ActionResult Test()
-        {
-            //return View(db.UserModels.ToList());
-            return View();
-        }
-
+        
         [HttpPost]
         public ActionResult testPage(string username, int password)
         {

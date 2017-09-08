@@ -13,6 +13,9 @@ namespace WebBookStore.Controllers
         // GET: Book
         public ActionResult Index()
         {
+            var x = HttpContext.Request.Url.PathAndQuery.ToString();
+            var username = x.Substring(11);
+            Session["user"] = username;
             return View();
         }
 

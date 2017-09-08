@@ -4,13 +4,14 @@
     ViewBag.Title = "Index";
         
 }
-@Session["user"]
+
 <h2>Index</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-@*<table class="table">
+Welcome @Session["user"]
+<table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.ISBN)
@@ -51,4 +52,4 @@
     </tr>
 }
 
-</table>*@
+</table>
