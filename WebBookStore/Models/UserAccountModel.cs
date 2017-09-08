@@ -38,10 +38,11 @@ namespace WebBookStore.Models
         public string Mail { get; set; }
 
         public bool isDeleted { get; set; }
-        
-               
 
-        public virtual ICollection<ImageModel> Images { get; set; }
+        public string Description { get; set; }
+        public byte[] Picture { get; set; }
+
+        // public virtual ICollection<ImageModel> Images { get; set; }
 
     }
 }

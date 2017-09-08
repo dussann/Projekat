@@ -15,7 +15,7 @@ namespace WebBookStore.Controllers
         {
             return View();
         }
-
+        
         [HttpPost]
         public ActionResult GetImage(ImageModel model, HttpPostedFileBase image)
         {
@@ -23,10 +23,12 @@ namespace WebBookStore.Controllers
             {                
                 model.Picture = new byte[image.ContentLength];
                 image.InputStream.Read(model.Picture, 0, image.ContentLength);
+                
+                
             }
-            db.ImageModels.Add(model);
+           // db.ImageModels.Add(model);
             db.SaveChanges();
-            return Content("Slika je sacuvana");
+            return RedirectToAction("Index", "Book");
         } 
     }
 }

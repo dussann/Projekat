@@ -11,7 +11,7 @@ namespace WebBookStore.Models
         public AppDbContext() : base("WebBookStoreBaza") { }
         public DbSet<BookModel> BookModels { get; set; }
         public DbSet<UserAccountModel> UserAccountModels { get; set; }
-        public DbSet<ImageModel> ImageModels { get; set; }
+       // public DbSet<ImageModel> ImageModels { get; set; }
         
     }
 }

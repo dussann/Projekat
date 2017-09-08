@@ -9,6 +9,6 @@ namespace WebBookStore.Models
     {
         public UserAccountModel UserAccount { get; set; }
         public BookModel Books { get; set; }
-        public ImageModel Images { get; set; }
+       // public ImageModel Images { get; set; }
     }
 }

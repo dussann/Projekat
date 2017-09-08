@@ -15,23 +15,22 @@ namespace WebBookStore.Controllers
     {
         private AppDbContext db = new AppDbContext();
 
-        // GET: UserAccountModels
+        
         public ActionResult Index()
         {
-            //return View(db.UserModels.ToList());
+            
             return View();
         }       
 
         [HttpPost]
         public ActionResult Index(ViewModel vm)
         {
-            //return View(db.UserModels.ToList());
-            
 
             //var trazenaOsoba1 = db.UserModels.Find(vm.UserAccount.Password);
             var trazenaOsoba = db.UserAccountModels.FirstOrDefault(user=>user.Password == vm.UserAccount.Password && user.Username == vm.UserAccount.Username);
             if (trazenaOsoba != null)
             {
+                Session["user"] = "aaaaaaaaaaa";
                 return RedirectToAction("Index","Book");
             }else
             {
@@ -44,26 +43,17 @@ namespace WebBookStore.Controllers
             return View();
         }
 
+
         [HttpPost]
-        public ActionResult registerPage(UserAccountModel vm)
+        public ActionResult registerPage(ViewModel vm, HttpPostedFileBase image)
         {
+            vm.UserAccount.Picture = new byte[image.ContentLength];
+            image.InputStream.Read(vm.UserAccount.Picture, 0, image.ContentLength);
 
-            //string fileName = Path.GetFileNameWithoutExtension(vm.UserAccount.ImageFile.FileName);
-            //string extension = Path.GetExtension(vm.UserAccount.ImageFile.FileName);
-            //fileName = fileName + DateTime.Now.ToString("yymmssffff");
-            //vm.UserAccount.ImagePath = "~/Image/" + fileName;
-            //fileName = Path.Combine(Server.MapPath("~/Image/"), fileName);
-            //vm.UserAccount.ImageFile.SaveAs(fileName);
-            try
-            {
-                db.UserAccountModels.Add(vm);
-
-                db.SaveChanges();
-                ModelState.Clear();
-            }catch(Exception ex)
-            {
-                throw;
-            }
+            db.UserAccountModels.Add(vm.UserAccount);
+               
+            db.SaveChanges();
+            ModelState.Clear();           
             
             return View("Index");       
         }
