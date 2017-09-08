@@ -14,13 +14,7 @@ namespace WebBookStore.Controllers
     public class UserAccountModelsController : Controller
     {
         private AppDbContext db = new AppDbContext();
-
-        public ActionResult Test()
-        {
-            Session["x"] = "asd";
-            return View();
-        }
-
+               
 
         public ActionResult Index()
         {
@@ -45,6 +39,12 @@ namespace WebBookStore.Controllers
             {
                 return Content("Ne postoji takva osoba");
             }            
+        }
+
+        public ActionResult LogOut()
+        {
+            Session.Clear();
+            return View("Index");
         }
 
         public ActionResult registerPage()

@@ -2,16 +2,16 @@
 
 @{
     ViewBag.Title = "Index";
+        
 }
-<link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css"
 
 <h2>Index</h2>
-<h3>Welcome @Session["user"]</h3>
+
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-@Html.ActionLink("Logout", "LogOut","UserAccountModels") |
-<table class="table" id="example">
+Welcome @Session["user"]
+<table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.ISBN)
@@ -24,12 +24,6 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Genre)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.isDeleted)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Description)
         </th>
        
         <th></th>
@@ -49,13 +43,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.Genre)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.isDeleted)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-       
+      
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.BookModelID }) |
             @Html.ActionLink("Details", "Details", new { id=item.BookModelID }) |
@@ -65,5 +53,3 @@
 }
 
 </table>
-<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-<script src="~/Scripts/myFile.js"></script>

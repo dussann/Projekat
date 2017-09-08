@@ -16,7 +16,7 @@ namespace WebBookStore.Controllers
             var x = HttpContext.Request.Url.PathAndQuery.ToString();
             var username = x.Substring(11);
             Session["user"] = username;
-            return View();
+            return View(db.BookModels.ToList());
         }
 
         
